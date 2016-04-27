@@ -206,8 +206,9 @@ class App(object):
 
             if flag:
                 height, width, _ = vis.shape
-                for i in range(1, 5):
-                    draw_rect(vis, depth=i, angle=(y - width/2) / 10)
+                if y:
+		                for i in range(1, 5):
+		                    draw_rect(vis, depth=i, angle=(y[0] - width/2) / 10)
                 cv2.imshow('camshift', vis)
 
             ch = 0xFF & cv2.waitKey(50)
