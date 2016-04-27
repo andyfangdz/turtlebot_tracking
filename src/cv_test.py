@@ -205,8 +205,9 @@ class App(object):
                 mark.draw_machine_mark(60, track_box[0], vis)
 
             if flag:
+                height, width, _ = vis.shape
                 for i in range(1, 5):
-                    draw_rect(vis, depth=i)
+                    draw_rect(vis, depth=i, angle=(y - width/2) / 10)
                 cv2.imshow('camshift', vis)
 
             ch = 0xFF & cv2.waitKey(50)
