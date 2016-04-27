@@ -32,4 +32,4 @@ class PIDController:
         self.previous_time = self.current_time
         self.previous_error = error
 
-        return self.Cp + (self.Ki * self.Ci) + (self.Kd + self.Cd)
+        return self.Cp + (self.Ki * self.Ci) + (self.Kd * self.Cd)
